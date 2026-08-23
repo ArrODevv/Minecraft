@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        // Contains: C/C++          (ms-vscode.cpptools),
+        //           C/C++ DevTools (ms-vscode.cpp-devtools),
+        //           C/C++ Themes   (ms-vscode.cpptools-themes)
+        "ms-vscode.cpptools-extension-pack",
+        // For HLSL, GLSL and Cg files (syntax highlighting for all 3,
+        // advanced features like code completion, etc. only for HLSL (which will be used later on...)).
+        "slevesque.shader",
+        // Utility for formatting your code with clang-format
+        "xaver.clang-format"
+    ]
+}
