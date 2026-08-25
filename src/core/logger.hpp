@@ -26,6 +26,11 @@ namespace minecraft {
     class Logger {
         public:
             Logger(); // TODO
+
+            void testLog();
+
+        private:
+            // ...
     };
 }
 
