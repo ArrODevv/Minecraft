@@ -634,4 +634,8 @@ Temporary Items
 [Oo]bj/*
 [Tt]arget/*
 
+# Generated log files
+log.latest
+*.log
+
 # End of custom entries

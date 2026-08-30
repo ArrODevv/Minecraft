@@ -1,18 +1,15 @@
-#include "runtime.hpp"
-
 #include <iostream>
 
+#include "core/logger.hpp"
+
+using namespace minecraft;
+
 int main(int argc, char** argv) {
-    using namespace minecraft;
-    Runtime::getInstance().getLogger().testLog();
-    Runtime::getInstance().getLogger().testLog();
+    Logger::init("./log.latest", LogLevel::INFO);
 
-    for(int i = 65535; i >= 0; i--) {
-        std::cout << "Loop " << i << std::endl;
-    }
+    // TODO: everything else
 
-    Runtime::getInstance().getLogger().testLog();
-    Runtime::getInstance().getLogger().testLog();
+    Logger::close();
 
     return 0;
 }

@@ -24,7 +24,7 @@ set(SRC
     src/main.cxx
     src/common.hpp
     src/core/logger.hpp
-    src/runtime.hpp
+    src/core/logger.cpp
 )
 
 add_executable(minecraft ${SRC})

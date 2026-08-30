@@ -1,10 +1,9 @@
 ---
-# We'll use defaults from the LLVM style, but with 4 columns indentation.
+# We'll use defaults from the Google style, but with 4 columns indentation.
 BasedOnStyle: Google
 IndentWidth: 4
 ---
 Language: Cpp
 UseCRLF: false
 LineEnding: LF
-KeepEmptyLinesAtEOF: true
 MaxEmptyLinesToKeep: 1

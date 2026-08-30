@@ -18,7 +18,7 @@ Non-exhaustive list of todos / ideas:
 - [ ] Asset pipeline
 - [ ] AppData
 
-# Sidequest(s)
+## Sidequest(s)
 
 Non-exhaustive list of sidequests I may/will do:
 
