@@ -25,6 +25,10 @@ set(SRC
     src/common.hpp
     src/core/logger.hpp
     src/core/logger.cpp
+    src/core/fs.hpp
+    src/core/fs.cpp
+    src/core/util.hpp
+    src/core/util.cpp
 )
 
 add_executable(minecraft ${SRC})
