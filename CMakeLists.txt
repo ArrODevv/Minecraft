@@ -29,6 +29,10 @@ set(SRC
     src/core/fs.cpp
     src/core/util.hpp
     src/core/util.cpp
+    src/math/mmath.hpp
+    src/math/mmath.cpp
+    src/math/vector2.hpp
+    src/math/vector2.cpp
 )
 
 add_executable(minecraft ${SRC})

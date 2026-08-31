@@ -16,7 +16,8 @@ Non-exhaustive list of todos / ideas:
 - [ ] Physics engine
 - [ ] UI "library"
 - [ ] Asset pipeline
-- [ ] AppData
+- [x] AppData
+- [ ] Unit Tests
 
 ## Sidequest(s)
 

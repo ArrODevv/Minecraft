@@ -70,7 +70,10 @@ namespace minecraft {
         
         std::lock_guard<std::mutex> guard(Logger::logMutex);
 
-        vsnprintf(buffer, BUF_SIZE, message, argptr);
+        va_list args_copy;
+        va_copy(args_copy, argptr);
+        vsnprintf(buffer, BUF_SIZE, message, args_copy);
+        va_end(args_copy);
         bufferLen = std::strlen(buffer);
         if(bufferLen > 0 && buffer[bufferLen - 1] != '\n')
             newLineRequired = true;
