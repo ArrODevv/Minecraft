@@ -61,7 +61,7 @@ elseif(BUILD_TYPE STREQUAL "DEBUG")
 endif()
 
 set(TESTING_SRC
-    tests/math/vector2.cpp
+    tests/math/vector2.cxx
 )
 
 list(APPEND TESTING_SRC ${SRC})
