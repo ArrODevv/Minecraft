@@ -20,6 +20,16 @@ else()
     message(STATUS "Unsupported BUILD_TYPE : ${BUILD_TYPE}")
 endif()
 
+include(FetchContent)
+FetchContent_Declare(
+    googletest
+    URL https://github.com/google/googletest/archive/8ecdd89c69171d4cb2fdc7fa9ebd47ba18b49009.zip
+)
+
+# On Windows: prevent overriding of parent project's compiler & linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
+
 set(SRC
     src/main.cxx
     src/common.hpp
@@ -49,3 +59,23 @@ elseif(BUILD_TYPE STREQUAL "DEBUG")
     #target_compile_definitions(minecraft PRIVATE _DEBUG)
     # TODO: compiler & linker flags
 endif()
+
+set(TESTING_SRC
+    tests/math/vector2.cpp
+)
+
+list(APPEND TESTING_SRC ${SRC})
+
+list(REMOVE_ITEM TESTING_SRC src/main.cxx)
+
+enable_testing()
+
+add_executable(UnitTests ${TESTING_SRC})
+target_include_directories(UnitTests PRIVATE src tests)
+target_link_libraries(
+    UnitTests
+    GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(UnitTests)

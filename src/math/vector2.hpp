@@ -24,7 +24,8 @@ namespace minecraft::math {
         Vector2 normalized() const;
 
         float dot(const Vector2& other) const;
-        float cross(const Vector2& other) const;
+        // Only for 3d vectors (oopsie)
+        //float cross(const Vector2& other) const;
 
         Vector2& operator+=(const Vector2& other);
         Vector2& operator-=(const Vector2& other);

@@ -5,9 +5,6 @@
 #include "core/logger.hpp"
 #include "core/fs.hpp"
 
-// temp
-#include "math/vector2.hpp"
-
 using namespace minecraft;
 
 int main(int argc, char** argv) {
@@ -30,16 +27,7 @@ int main(int argc, char** argv) {
 
     // TODO: everything else
 
-    // temp
-    math::Vector2 vec {12.34f, 56.78f};
-    std::cout << "iostream: \"" << vec << "\"" << std::endl;
-
-    Logger::warn("Logger::warn: \"%s\"", vec.toString().c_str());
-
-    math::Vector2 vec_2 {1.f, 1.f};
-    Logger::debug("Vector2(12.34f, 56.78f) + Vector2(1.f, 1.f) = %s", (vec + vec_2).toString().c_str());
-
-    Logger::debug("len of vec1: %f", vec.length());
+    
 
     Logger::close();
 

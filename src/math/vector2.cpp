@@ -46,10 +46,11 @@ namespace minecraft::math {
         return x * other.x + y * other.y;
     }
 
-    float Vector2::cross(const Vector2& other) const {
-        // I hope this formula is correct: (from https://wumbo.net/formulas/cross-product-2d/)
-        return (x * other.y) - (y * other.x);
-    }
+    // Only for 3d vectors (oopsie)
+    //float Vector2::cross(const Vector2& other) const {
+    //    // I hope this formula is correct: (from https://wumbo.net/formulas/cross-product-2d/)
+    //    return (x * other.y) - (y * other.x);
+    //}
 
     Vector2& Vector2::operator+=(const Vector2& other) {
         x += other.x;
